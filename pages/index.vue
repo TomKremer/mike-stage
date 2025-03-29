@@ -10,7 +10,13 @@ if (!pages.value) {
   <UPage v-if="pages">
     <!-- <pre>{{ pages }}</pre> -->
     <UPageBody>
-      <UPageHero headline="Praktikum" title="Hallo Mike" description="Hier kannst du die Grundlagen lernen, die wir in der Digitalagentur täglich nutzen. Du wirst etwas über die Geschichte des Internets und Kerntechnologien lernen. Am Ende wirst du deinen eigenen Lebenslauf programmieren und gestalten." />
+      <UPageHero
+        headline="Praktikum"
+        title="Hallo Mike"
+        description="Hier kannst du die Grundlagen lernen, die wir in der Digitalagentur täglich nutzen. Du wirst etwas über die Geschichte des Internets und Kerntechnologien lernen. Am Ende wirst du deinen eigenen Lebenslauf programmieren und gestalten."
+        orientation="horizontal">
+        <nuxt-img src="img/mike-hero.png" alt="Mike" width="400" height="400" class="rounded" />
+      </UPageHero>
       <UBlogPosts>
         <UBlogPost
           v-for="page in pages"
