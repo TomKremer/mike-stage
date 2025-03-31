@@ -4,7 +4,7 @@
     <div class="md:flex justify-between gap-4">
       <div>
         <div class="text-left font-serif text-4xl text-red-600 underline">Persönliche Daten</div>
-        <p class="text-Stone-800 mt-4 text-2xl">
+        <p class="text-stone-800 mt-4 text-2xl">
           Name: Mike <br />
           Vorname: Breda <br />
           Geburtsdatum: 30.09.2010 <br />
