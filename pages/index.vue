@@ -1,4 +1,20 @@
 <script setup lang="ts">
+
+const links = ref([
+  {
+    label: 'Lebenlauf erstellt von Mike',
+    to: '/cv',
+    icon: 'heroicons:clipboard-document-list-solid'
+  },
+  // {
+  //   label: 'Redesign von Tom',
+  //   to: '/cv-tom',
+  //   color: 'neutral',
+  //   variant: 'subtle',
+  //   trailingIcon: 'i-lucide-arrow-right'
+  // }
+])
+
 const { data: pages } = await useAsyncData(() => queryCollection("content").all());
 
 if (!pages.value) {
@@ -14,7 +30,7 @@ if (!pages.value) {
         headline="Praktikum"
         title="Hallo Mike"
         description="Hier kannst du die Grundlagen lernen, die wir in der Digitalagentur täglich nutzen. Du wirst etwas über die Geschichte des Internets und Kerntechnologien lernen. Am Ende wirst du deinen eigenen Lebenslauf programmieren und gestalten."
-        orientation="horizontal">
+        orientation="horizontal" :links="links">
         <nuxt-img src="img/mike-hero.png" alt="Mike" width="400" height="400" class="rounded" />
       </UPageHero>
       <UBlogPosts>
